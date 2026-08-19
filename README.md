@@ -4,3 +4,11 @@ As mensagens são salvas na tabela "message", banco msgstore.db. Tem de tomar MU
 (Primeira vez utilizando android studio)
 Os emuladores podem ser acessados via terminal, os arquivos de todo o sistema podem ser copiados, inclusive. 
 Escrever e compilar C++ ainda é um mistério por aqui. 
+
+Agora sabemos como compilar código C e rodar nativamente, veja:
+cd C:\Users\otv\AndroidStudioProjects\intelitraderapp
+.\gradlew externalNativeBuildDebug
+
+adb push app/customBuild/Debug/x86/wppmonitor /data/local/tmp/
+adb shell chmod +x /data/local/tmp/wppmonitor
+adb shell /data/local/tmp/wppmonitor
